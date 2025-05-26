@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <title>Accesso Agenti - RODA</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="login-container">
+    <img src="roda.png" alt="Roda Logo" class="logo">
+    <h2>Accesso Riservato</h2>
+    <input type="password" id="password" placeholder="Inserisci la password">
+    <button onclick="checkPassword()">Entra</button>
+    <p id="error"></p>
+  </div>
+  <script>
+    function checkPassword() {
+      const password = document.getElementById("password").value;
+      if (password === "agente123") {
+        window.location.href = "catalogo.html";
+      } else {
+        document.getElementById("error").innerText = "Password errata.";
+      }
+    }
+  </script>
+</body>
+</html>
